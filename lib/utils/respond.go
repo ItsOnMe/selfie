@@ -3,7 +3,7 @@ package utils
 import (
 	"net/http"
 
-	"github.com/alinz/releasifier/errors"
+	"github.com/pressly/selfie/errors"
 )
 
 //Respond is a utility function which helps identifies error from other messages

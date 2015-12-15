@@ -5,10 +5,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/alinz/releasifier/common"
-	"github.com/alinz/releasifier/config"
-	internalErrors "github.com/alinz/releasifier/errors"
-	"github.com/alinz/releasifier/logme"
+	"github.com/pressly/selfie/common"
+	"github.com/pressly/selfie/config"
+	internalErrors "github.com/pressly/selfie/errors"
+	"github.com/pressly/selfie/logme"
 	"upper.io/bond"
 )
 

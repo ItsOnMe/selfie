@@ -1,6 +1,6 @@
 package apps
 
-import "github.com/alinz/releasifier/data"
+import "github.com/pressly/selfie/data"
 
 //Apps Requests
 

@@ -3,7 +3,7 @@ package util
 import (
 	"strconv"
 
-	"github.com/alinz/releasifier/web/constants"
+	"github.com/pressly/selfie/web/constants"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/pressly/chi"
 	"golang.org/x/net/context"

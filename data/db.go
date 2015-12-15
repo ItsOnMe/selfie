@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/alinz/releasifier/config"
+	"github.com/pressly/selfie/config"
 	"upper.io/bond"
 	"upper.io/db/postgresql"
 )

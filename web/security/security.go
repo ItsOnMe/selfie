@@ -3,7 +3,7 @@ package security
 import (
 	"net/http"
 
-	"github.com/alinz/releasifier/config"
+	"github.com/pressly/selfie/config"
 )
 
 //Setup setups and configure security package.

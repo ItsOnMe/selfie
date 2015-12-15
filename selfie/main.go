@@ -4,13 +4,13 @@ import (
 	"flag"
 	"os"
 
-	"github.com/alinz/releasifier"
-	"github.com/alinz/releasifier/config"
-	"github.com/alinz/releasifier/logme"
+	"github.com/pressly/selfie"
+	"github.com/pressly/selfie/config"
+	"github.com/pressly/selfie/logme"
 )
 
 var (
-	flags    = flag.NewFlagSet("releasifier", flag.ExitOnError)
+	flags    = flag.NewFlagSet("selfie", flag.ExitOnError)
 	confFile = flags.String("config", "", "path to config file")
 )
 
@@ -27,12 +27,12 @@ func main() {
 	}
 
 	//create a new Releasidier app.
-	app, err := releasifier.New(conf)
+	app, err := selfie.New(conf)
 	if err != nil {
 		logme.Fatal(err)
 	}
 
-	//start the Releasifier's App.
+	//start the selfie's App.
 	//this will block until app stops, either by panic or exit signal
 	app.Start()
 

@@ -3,10 +3,10 @@ package apps
 import (
 	"net/http"
 
-	"github.com/alinz/releasifier/data"
-	"github.com/alinz/releasifier/lib/utils"
-	"github.com/alinz/releasifier/web/constants"
-	"github.com/alinz/releasifier/web/util"
+	"github.com/pressly/selfie/data"
+	"github.com/pressly/selfie/lib/utils"
+	"github.com/pressly/selfie/web/constants"
+	"github.com/pressly/selfie/web/util"
 	"golang.org/x/net/context"
 )
 

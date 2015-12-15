@@ -3,7 +3,7 @@ package utils_test
 import (
 	"testing"
 
-	"github.com/alinz/releasifier/lib/utils"
+	"github.com/pressly/selfie/lib/utils"
 	"github.com/stretchr/testify/assert"
 )
 

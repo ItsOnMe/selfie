@@ -9,15 +9,15 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/alinz/releasifier/common"
-	"github.com/alinz/releasifier/data"
-	internalErrors "github.com/alinz/releasifier/errors"
-	"github.com/alinz/releasifier/logme"
-	"github.com/alinz/releasifier/web/util"
+	"github.com/pressly/selfie/common"
+	"github.com/pressly/selfie/data"
+	internalErrors "github.com/pressly/selfie/errors"
+	"github.com/pressly/selfie/logme"
+	"github.com/pressly/selfie/web/util"
 
-	"github.com/alinz/releasifier/config"
-	"github.com/alinz/releasifier/lib/crypto"
-	"github.com/alinz/releasifier/lib/utils"
+	"github.com/pressly/selfie/config"
+	"github.com/pressly/selfie/lib/crypto"
+	"github.com/pressly/selfie/lib/utils"
 
 	"golang.org/x/net/context"
 )
