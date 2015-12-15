@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/alinz/releasifier/lib/utils"
+	"github.com/pressly/selfie/lib/utils"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/pressly/chi"
 	"golang.org/x/net/context"

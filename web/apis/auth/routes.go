@@ -1,7 +1,7 @@
 package auth
 
 import (
-	m "github.com/alinz/releasifier/web/middlewares"
+	m "github.com/pressly/selfie/web/middlewares"
 	"github.com/pressly/chi"
 )
 

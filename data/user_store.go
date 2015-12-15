@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/alinz/releasifier/errors"
+	"github.com/pressly/selfie/errors"
 
 	"upper.io/bond"
 	"upper.io/db"

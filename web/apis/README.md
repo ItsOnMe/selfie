@@ -55,7 +55,7 @@ PUT    : /apps/:appID/releases/:releaseID/lock
 POST   : /apps/:appID/releases/:releaseID/bundles/download
 ```
 
-# Releasifier APIs
+# selfie APIs
 
 ## Authentication
 

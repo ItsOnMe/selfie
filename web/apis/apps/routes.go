@@ -1,8 +1,8 @@
 package apps
 
 import (
-	m "github.com/alinz/releasifier/web/middlewares"
-	"github.com/alinz/releasifier/web/security"
+	m "github.com/pressly/selfie/web/middlewares"
+	"github.com/pressly/selfie/web/security"
 	"github.com/pressly/chi"
 )
 

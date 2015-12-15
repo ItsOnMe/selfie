@@ -3,8 +3,8 @@ package middlewares
 import (
 	"net/http"
 
-	"github.com/alinz/releasifier/lib/utils"
-	"github.com/alinz/releasifier/web/constants"
+	"github.com/pressly/selfie/lib/utils"
+	"github.com/pressly/selfie/web/constants"
 	"github.com/pressly/chi"
 	"golang.org/x/net/context"
 )

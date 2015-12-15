@@ -3,8 +3,8 @@ package web
 import (
 	"net/http"
 
-	"github.com/alinz/releasifier/web/apis/apps"
-	"github.com/alinz/releasifier/web/apis/auth"
+	"github.com/pressly/selfie/web/apis/apps"
+	"github.com/pressly/selfie/web/apis/auth"
 	"github.com/pressly/chi"
 )
 

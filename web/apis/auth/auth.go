@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/alinz/releasifier/data"
-	"github.com/alinz/releasifier/errors"
-	"github.com/alinz/releasifier/lib/utils"
-	"github.com/alinz/releasifier/web/constants"
-	"github.com/alinz/releasifier/web/security"
+	"github.com/pressly/selfie/data"
+	"github.com/pressly/selfie/errors"
+	"github.com/pressly/selfie/lib/utils"
+	"github.com/pressly/selfie/web/constants"
+	"github.com/pressly/selfie/web/security"
 	"golang.org/x/net/context"
 )
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-database="releasifier_db"
-user="releasifier_agent"
+database="selfie_db"
+user="selfie_agent"
 password="98uhi4q3brjfnsdlzisw2"
 
 

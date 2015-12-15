@@ -9,26 +9,26 @@ dist-tools:
 	go get -v github.com/robfig/glock
 
 deps:
-	@glock -v sync github.com/alinz/releasifier
+	@glock -v sync github.com/pressly/selfie
 
 build: clean
 	@mkdir -p ./bin
-	cd cmd/releasifier && GOGC=off go build -i -o ../../bin/releasifier
+	cd cmd/selfie && GOGC=off go build -i -o ../../bin/selfie
 
 build-all: clean
-	cd cmd/releasifier; \
+	cd cmd/selfie; \
 	for GOOS in darwin linux windows; do \
 		for GOARCH in 386 amd64; do \
 			echo "building $$GOOS $$GOARCH ..."; \
 			export GOOS=$$GOOS; \
 			export GOARCH=$$GOARCH; \
-			go build -o ../../bin/releasifier-$$GOOS-$$GOARCH; \
+			go build -o ../../bin/selfie-$$GOOS-$$GOARCH; \
 		done \
 	done
 
 dev: kill
-	@(export CONFIG=$$PWD/etc/releasifier.conf && \
-		cd ./cmd/releasifier && \
+	@(export CONFIG=$$PWD/etc/selfie.conf && \
+		cd ./cmd/selfie && \
 		fresh -c ../../etc/fresh-runner.conf -w=../..)
 
 ##
@@ -56,7 +56,7 @@ docker-dev:
 	docker run -d -p 5432:5432 -v $$pwd/bin/data:/var/lib/postgresql/data --restart=always --name postgres -e POSTGRES_PASSWORD=betame postgres
 
 docker-psql:
-	docker run -it --rm --link releasifierdb:releasifierdb releasifierdb sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U releasifierdb'
+	docker run -it --rm --link selfiedb:selfiedb selfiedb sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U selfiedb'
 
 start-db:
 	docker run -d \
@@ -69,12 +69,12 @@ start-db:
 						 postgres
 
 
-kill-releasifier:
-	docker ps | awk 'NR>1' | grep releasifier | awk '{print $$1}' | xargs docker kill
-	docker ps | awk 'NR>1' | grep releasifierdb | awk '{print $$1}' | xargs docker kill
-	docker ps -a | awk 'NR>1' | grep releasifier | awk '{print $$1}' | xargs docker rm
-	docker ps -a | awk 'NR>1' | grep releasifierdb | awk '{print $$1}' | xargs docker rm
+kill-selfie:
+	docker ps | awk 'NR>1' | grep selfie | awk '{print $$1}' | xargs docker kill
+	docker ps | awk 'NR>1' | grep selfiedb | awk '{print $$1}' | xargs docker kill
+	docker ps -a | awk 'NR>1' | grep selfie | awk '{print $$1}' | xargs docker rm
+	docker ps -a | awk 'NR>1' | grep selfiedb | awk '{print $$1}' | xargs docker rm
 
-run-prod: kill-releasifier
-	docker run -d --name releasifierdb releasifierdb
-	docker run -d -p 7331:7331 --name releasifier --restart=always --link releasifierdb releasifier
+run-prod: kill-selfie
+	docker run -d --name selfiedb selfiedb
+	docker run -d -p 7331:7331 --name selfie --restart=always --link selfiedb selfie
